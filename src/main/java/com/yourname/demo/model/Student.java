@@ -6,17 +6,20 @@ import java.util.UUID;
 public class Student {
 
   private UUID id;
-  private final Integer age;
-  private final String firstName;
-  private final String lastName;
-  private final String course;
+  private Integer age;
+  private String firstName;
+  private String lastName;
+  private String course;
+
+  public Student(){
+  }
 
   public Student(
-      @JsonProperty("id") UUID id,
-      @JsonProperty("age") Integer age,
-      @JsonProperty("firstName") String firstName,
-      @JsonProperty("lastName") String lastName,
-      @JsonProperty("course") String course) {
+      UUID id,
+      Integer age,
+      String firstName,
+      String lastName,
+      String course) {
     this.id = id;
     this.age = age;
     this.firstName = firstName;
